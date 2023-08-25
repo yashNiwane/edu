@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-password.component.scss'],
 })
 export class NewPasswordComponent implements OnInit {
+  passwordTextType!: boolean;
   constructor() {}
 
   ngOnInit(): void {}
+
+  togglePasswordTextType() {
+    this.passwordTextType = !this.passwordTextType;
+  }
 }
