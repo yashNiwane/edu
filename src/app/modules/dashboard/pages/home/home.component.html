@@ -1,0 +1,28 @@
+<div class="mx-auto h-full px-4 py-4 sm:px-8 lg:container">
+  <app-nft-header></app-nft-header>
+  <div
+    class="flex flex-col rounded-lgdark:bg-night-700 px-4 py-4 grid grid-cols-3 gap-4 md:grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+    <div *ngFor="let _ of [].constructor(6); let i = index"  class="rounded cursor-pointer hover:-translate-y-1 hover:shadow-2xl">
+      <div class="flex flex-col justify-between p-2 bg-white text-center  row-start-1 row-end-1 border-[rgba(156,_198,_255,_0.67)] shadow-[0px_4px_12px_0px_rgba(0,_0,_0,_0.04)]  hover:bg-[#fff6d4]">
+        <img src="assets/images/python.svg" class="h-28" alt="">
+        <h2 class="text-md font-semibold mt-2 text-gray-900 dark:text-night-50">Python</h2>
+        <div class="text-xs font-light mt-2 mb-4 text-gray-400 dark:text-night-300">
+          Lorem ipsum dolor sit amet consectetur. Fringilla odio ornare
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr class="border-solid border-gray-200 mt-5 dark:border-night-500" />
+  <div
+  class="flex mt-5 flex-col rounded-lg px-4 py-4 dark:bg-night-700 grid grid-cols-2 gap-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2">
+  <div *ngFor="let _ of [].constructor(2); let i = index"  class="rounded cursor-pointer hover:-translate-y-1 hover:shadow-2xl">
+    <div class="flex flex-col justify-between p-2 bg-white text-center  row-start-1 row-end-1 border-[rgba(156,_198,_255,_0.67)] shadow-[0px_4px_12px_0px_rgba(0,_0,_0,_0.04)]  hover:bg-[#fff6d4]">
+      <img src="assets/images/plus.svg" class="h-28" alt="">
+      <h2 class="text-md font-semibold mt-2 text-gray-900 dark:text-night-50">New Leaerning Path</h2>
+      <div class="text-xs font-light mt-2 mb-4 text-gray-400 dark:text-night-300">
+        Chart your knowledge journey with Popular learning path by our experts.
+      </div>
+    </div>
+  </div>
+</div>
+</div>

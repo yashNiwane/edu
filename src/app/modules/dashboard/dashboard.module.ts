@@ -15,10 +15,12 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { NftHeaderComponent } from './components/nft/nft-header/nft-header.component';
 import { NftAuctionsTableComponent } from './components/nft/nft-auctions-table/nft-auctions-table.component';
 import { NftAuctionsTableItemComponent } from './components/nft/nft-auctions-table-item/nft-auctions-table-item.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
     DashboardComponent,
+    HomeComponent,
     NftComponent,
     NftSingleCardComponent,
     NftDualCardComponent,
