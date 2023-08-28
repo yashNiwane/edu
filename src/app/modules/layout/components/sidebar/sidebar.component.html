@@ -1,91 +1,105 @@
-<nav [ngClass]="(showSideBar$ | async) ? 'w-52 xl:w-64' : 'w-[70px]'"
-  class=" overflow-hidden hidden h-full flex-col justify-between bg-white transition-all duration-300 scrollbar-thin dark:bg-night-700 dark:scrollbar-thumb-night-500 dark:scrollbar-track-night-600 lg:flex">
-  <div>
-    <!-- Logo -->
-    <div class="relative h-10">
-      <div class="flex items-center" *ngIf="showSideBar$ | async">
-        <a class="flex items-center justify-center bg-primary-500 p-2 focus:outline-none focus:ring-1">
-          <img style=" max-width: 93%; " src="assets/icons/logo.svg" />
-        </a>
+<nav [ngClass]="(showSideBar$ | async) ? 'w-60 xl:w-70' : 'w-[70px]'"
+  class="gridh-screen overflow-hidden hidden h-full flex-col justify-between bg-white transition-all duration-300 scrollbar-thin dark:bg-night-700 dark:scrollbar-thumb-night-500 dark:scrollbar-track-night-600 lg:flex">
+  <!-- <div> -->
+  <div class="grid grid-rows-[7%] [70%] [10%] [7%] h-screen">
+    <div>
+      <!-- Logo -->
+      <div class="relative h-10">
+        <div class="flex items-center" *ngIf="showSideBar$ | async">
+          <a class="flex items-center justify-center bg-primary-500 p-2 focus:outline-none focus:ring-1">
+            <img style=" max-width: 93%; " src="assets/icons/logo.svg" />
+          </a>
+        </div>
       </div>
     </div>
-
-    <!-- Separator -->
-    <div class="pt-3 mb-3">
+    <div
+      class="scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto h-auto scrollbar-thin scrollbar-track-gray-50 scrollbar-thumb-gray-100 ">
+      <app-sidebar-menu></app-sidebar-menu>
+    </div>
+    <div class="h-41 p-3">
+      <div
+        class="border-solid border-[#e5e7eb] shadow-[0px_4px_12px_0px_rgba(0,_0,_0,_0.04)] overflow-hidden bg-[linear-gradient(134deg,_#ffcc00_-165%,#ffffff_53%,#fff6d4_134%)] bg-cover bg-50%_50% bg-blend-normal bg-no-repeat flex flex-col justify-between w-full h-48 px-3 py-4 border rounded-lg">
+        <img src="assets/images/discountcoupons.svg" class="h-20" alt="Descount" />
+        <div>
+          <div class="flex items-end justify-between text-xs font-semibold text-gray-400 dark:text-night-300"> Used Token <span>800/<span class="text-primary-500">1000</span></span></div>
+          <div class="relative w-full bg-gray-100 rounded mt-2">
+            <div style="width: 60%" class="absolute top-0 h-2 rounded shim-green"></div>
+          </div>
+        </div>
+        
+        <div class="flex items-end justify-between text-xs font-light text-gray-400 dark:text-night-300 "> <span class="hover:text-primary-400 cursor-pointer">Dismiss</span><span class="flex items-end font-semibold hover:text-primary-400 cursor-pointer "><img src="assets/icons/outline/crown.svg" class="mr-1"/>Purchase Token</span></div>
+      </div>
+    </div>
+    <div>
       <hr class="border-dashed border-gray-200 dark:border-night-500" />
-    </div>
+      <div class="mx-4 my-4 space-y-1">
+        <!-- Dark Theme -->
+        <!-- <div
+        (click)="toggleTheme()"
+        class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-gray-100 dark:hover:bg-night-600">
+        <svg-icon
+          [src]="themeService.isDark ? 'assets/icons/outline/sun.svg' : 'assets/icons/outline/moon.svg'"
+          [svgClass]="'h-5 w-5 text-gray-400 dark:text-night-400'">
+        </svg-icon>
+  
+        <a class="ml-3 truncate text-xs font-semibold tracking-wide text-gray-600 focus:outline-none dark:text-night-100">
+          {{ themeService.isDark ? 'Light Theme' : 'Dark Theme' }}
+        </a>
+  
+        <div class="fixed w-full" *ngIf="!(showSideBar$ | async)">
+          <span
+            class="z-1 absolute left-12 -top-4 w-auto min-w-max origin-left scale-0 rounded-md bg-black p-2 text-xs font-bold text-white shadow-md transition-all duration-200 group-hover:scale-100 dark:bg-white dark:text-night-900">
+            Theme
+          </span>
+        </div>
+      </div> -->
+        <!-- Sign out -->
+        <div
+          class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-gray-100 dark:hover:bg-night-600">
+          <svg-icon src="assets/icons/outline/logout.svg" [svgClass]="'h-5 w-5 text-red-400 dark:text-night-400'">
+          </svg-icon>
 
-    <!-- Menu Items -->
-    <app-sidebar-menu></app-sidebar-menu>
+          <a routerLink="/auth"
+            class="ml-3 truncate text-xs font-semibold tracking-wide text-red-600 focus:outline-none dark:text-night-100">
+            Sign out
+          </a>
+
+          <div class="fixed w-full" *ngIf="!(showSideBar$ | async)">
+            <span
+              class="z-1 absolute left-12 -top-4 w-auto min-w-max origin-left scale-0 rounded-md bg-black p-2 text-xs font-bold text-white shadow-md transition-all duration-200 group-hover:scale-100 dark:bg-white dark:text-night-900">
+              Sign out
+            </span>
+          </div>
+        </div>
+        <!-- Version -->
+        <div
+          class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-gray-100 dark:hover:bg-night-600">
+          <svg-icon src="assets/icons/outline/information-circle.svg"
+            [svgClass]="'h-5 w-5 text-gray-400 dark:text-night-400'">
+          </svg-icon>
+
+          <a target="_blank" href="https://github.com/luciano-work/angular-tailwind"
+            class="ml-3 truncate text-[10px] font-semibold tracking-wide text-gray-600 focus:outline-none dark:text-night-100">
+            <span class="rounded-lg bg-yellow-400/10 px-2 font-semibold text-yellow-500">v{{ appJson.version }}</span>
+          </a>
+
+          <div class="fixed w-full" *ngIf="!(showSideBar$ | async)">
+            <span
+              class="z-1 absolute left-12 -top-4 w-auto min-w-max origin-left scale-0 rounded-md bg-black p-2 text-xs font-bold text-white shadow-md transition-all duration-200 group-hover:scale-100 dark:bg-white dark:text-night-900">
+              v{{ appJson.version }}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="mx-4 my-4 space-y-1 fixed bottom-0 left-2">
-
-    <div
-      class="group flex cursor-pointer rounded relative p-5 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-md overflow-hidden">
-      <div class="rounded-md border border-dashed border-gray-300 p-4 text-center dark:border-night-400"><small
-          class="text-gray-400 dark:text-night-300">Last Bid</small>
-        <h1 class="text-3xl font-semibold text-gray-900 dark:text-night-50">0.12 ETH</h1><span
-          class="text-lg font-semibold text-gray-500 dark:text-night-300">$187.47</span>
-      </div>
-
-    </div>
-    <!-- Dark Theme -->
-    <!-- <div
-      (click)="toggleTheme()"
-      class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-gray-100 dark:hover:bg-night-600">
-      <svg-icon
-        [src]="themeService.isDark ? 'assets/icons/outline/sun.svg' : 'assets/icons/outline/moon.svg'"
-        [svgClass]="'h-5 w-5 text-gray-400 dark:text-night-400'">
-      </svg-icon>
-
-      <a class="ml-3 truncate text-xs font-semibold tracking-wide text-gray-600 focus:outline-none dark:text-night-100">
-        {{ themeService.isDark ? 'Light Theme' : 'Dark Theme' }}
-      </a>
-
-      <div class="fixed w-full" *ngIf="!(showSideBar$ | async)">
-        <span
-          class="z-1 absolute left-12 -top-4 w-auto min-w-max origin-left scale-0 rounded-md bg-black p-2 text-xs font-bold text-white shadow-md transition-all duration-200 group-hover:scale-100 dark:bg-white dark:text-night-900">
-          Theme
-        </span>
-      </div>
+  <!-- Separator -->
+  <!-- <div class="pt-3 mb-3">
+      <hr class="border-dashed border-gray-200 dark:border-night-500" />
     </div> -->
-    <!-- Sign out -->
-    <div
-      class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-gray-100 dark:hover:bg-night-600">
-      <svg-icon src="assets/icons/outline/logout.svg" [svgClass]="'h-5 w-5 text-red-400 dark:text-night-400'">
-      </svg-icon>
 
-      <a routerLink="/auth"
-        class="ml-3 truncate text-xs font-semibold tracking-wide text-red-600 focus:outline-none dark:text-night-100">
-        Sign out
-      </a>
+  <!-- Menu Items -->
+  <!-- <app-sidebar-menu></app-sidebar-menu> -->
+  <!-- </div> -->
 
-      <div class="fixed w-full" *ngIf="!(showSideBar$ | async)">
-        <span
-          class="z-1 absolute left-12 -top-4 w-auto min-w-max origin-left scale-0 rounded-md bg-black p-2 text-xs font-bold text-white shadow-md transition-all duration-200 group-hover:scale-100 dark:bg-white dark:text-night-900">
-          Sign out
-        </span>
-      </div>
-    </div>
-    <!-- Version -->
-    <div
-      class="group flex h-9 cursor-pointer items-center justify-start rounded p-2 hover:bg-gray-100 dark:hover:bg-night-600">
-      <svg-icon src="assets/icons/outline/information-circle.svg"
-        [svgClass]="'h-5 w-5 text-gray-400 dark:text-night-400'">
-      </svg-icon>
-
-      <a target="_blank" href="https://github.com/luciano-work/angular-tailwind"
-        class="ml-3 truncate text-[10px] font-semibold tracking-wide text-gray-600 focus:outline-none dark:text-night-100">
-        <span class="rounded-lg bg-yellow-400/10 px-2 font-semibold text-yellow-500">v{{ appJson.version }}</span>
-      </a>
-
-      <div class="fixed w-full" *ngIf="!(showSideBar$ | async)">
-        <span
-          class="z-1 absolute left-12 -top-4 w-auto min-w-max origin-left scale-0 rounded-md bg-black p-2 text-xs font-bold text-white shadow-md transition-all duration-200 group-hover:scale-100 dark:bg-white dark:text-night-900">
-          v{{ appJson.version }}
-        </span>
-      </div>
-    </div>
-  </div>
 </nav>

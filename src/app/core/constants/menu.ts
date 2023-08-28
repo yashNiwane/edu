@@ -7,12 +7,12 @@ export class Menu {
       separator: true,
       items: [
         {
-          icon: 'assets/icons/outline/chart-pie.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Dashboard Dashboard Dashboard',
           route: '/dashboard/nfts',
         },
         {
-          icon: 'assets/icons/outline/lock-closed.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Auth',
           route: '/auth',
           children: [
@@ -30,17 +30,17 @@ export class Menu {
       separator: true,
       items: [
         {
-          icon: 'assets/icons/outline/download.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Download',
           route: '/downloads',
         },
         {
-          icon: 'assets/icons/outline/gift.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Gift Card',
           route: '/gift',
         },
         {
-          icon: 'assets/icons/outline/users.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Users',
           route: '/users',
         },
@@ -51,17 +51,17 @@ export class Menu {
       separator: true,
       items: [
         {
-          icon: 'assets/icons/outline/cog.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Settings',
           route: '/settings',
         },
         {
-          icon: 'assets/icons/outline/bell.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Notifications',
           route: '/gift',
         },
         {
-          icon: 'assets/icons/outline/folder.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Folders',
           route: '/folders',
           children: [
@@ -76,17 +76,17 @@ export class Menu {
       separator: true,
       items: [
         {
-          icon: 'assets/icons/outline/cog.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Settings',
           route: '/settings',
         },
         {
-          icon: 'assets/icons/outline/bell.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Notifications',
           route: '/gift',
         },
         {
-          icon: 'assets/icons/outline/folder.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Folders',
           route: '/folders',
           children: [
@@ -101,17 +101,17 @@ export class Menu {
       separator: true,
       items: [
         {
-          icon: 'assets/icons/outline/cog.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Settings',
           route: '/settings',
         },
         {
-          icon: 'assets/icons/outline/bell.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Notifications',
           route: '/gift',
         },
         {
-          icon: 'assets/icons/outline/folder.svg',
+          icon: 'assets/icons/outline/message-text.svg',
           label: 'Folders',
           route: '/folders',
           children: [
