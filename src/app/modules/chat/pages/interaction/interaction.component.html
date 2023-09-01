@@ -1,0 +1,60 @@
+<div class="mx-auto h-full px-4 py-4 sm:px-8 lg:container">
+  <div
+    class="h-full bg-white text-center border-[rgba(156,_198,_255,_0.67)] rounded-xl shadow-[0px_4px_12px_0px_rgba(0,_0,_0,_0.04)] rounded-lgdark:bg-night-700 px-4 py-4">
+    <div class="grid grid-rows-[50%] [50%] h-full relative">
+      <div>
+        <img class="mx-auto p-20" src="assets/images/defualt.svg" />
+      </div>
+
+      <div class="absolute bottom-0 w-full">
+        <div class="flex mb-5 flex-col px-2 py-2 grid grid-cols-2 gap-4">
+          <div *ngFor="let _ of [].constructor(2); let i = index" class="rounded cursor-pointer hover:-translate-y-">
+            <div
+              class="flex flex-col justify-between p-2 rounded-xl border border-gray-100 bg-sky-50 text-left  row-start-1 row-end-1">
+              <h2 class="text-xs font-semibold mt-2 text-gray-900 dark:text-night-50">Write a code</h2>
+              <div class="text-xs font-light mt-2 mb-4 text-gray-400 dark:text-night-300">
+                Just Let me Know the number of the programming language you’re interested in!
+              </div>
+            </div>
+          </div>
+          <div *ngFor="let _ of [].constructor(2); let i = index" class="rounded cursor-pointer hover:-translate-y-">
+            <div
+              class="flex flex-col justify-between p-2 rounded-xl border border-gray-100 bg-sky-50 text-left  row-start-1 row-end-1">
+              <h2 class="text-xs font-semibold mt-2 text-gray-900 dark:text-night-50">Write a code</h2>
+              <div class="text-xs font-light mt-2 mb-4 text-gray-400 dark:text-night-300">
+                Just Let me Know the number of the programming language you’re interested in!
+              </div>
+            </div>
+          </div>
+        </div>
+        <form>
+          <label for="default-search"
+            class=" text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
+          <div class="relative">
+            <input type="search" id="default-search"
+              class="block p-4 pl-4 w-full text-sm text-gray-700 rounded-xl border border-gray-300 focus:ring-yellow-500 focus:border-yello-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Example : 'Explain quantum computing in simple terms'" required>
+            <div
+              class=" shadow-xl cursor-pointer text-white absolute right-2.5 bottom-1.5 bg-primary-400 hover:bg-primary-500 rounded-lg text-sm px-3 py-3">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_157_531)">
+                  <path
+                    d="M3.16667 17.0707L17.7083 10.8374C18.3833 10.5457 18.3833 9.59573 17.7083 9.30407L3.16667 3.07073C2.61667 2.82907 2.00833 3.2374 2.00833 3.82907L2 7.67073C2 8.0874 2.30833 8.44573 2.725 8.49573L14.5 10.0707L2.725 11.6374C2.30833 11.6957 2 12.0541 2 12.4707L2.00833 16.3124C2.00833 16.9041 2.61667 17.3124 3.16667 17.0707Z"
+                    fill="#212121" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_157_531">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+
+            </div>
+            <!-- <button type="submit"
+              class="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Search</button> -->
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
