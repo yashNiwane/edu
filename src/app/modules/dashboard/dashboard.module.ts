@@ -16,6 +16,11 @@ import { NftHeaderComponent } from './components/nft/nft-header/nft-header.compo
 import { NftAuctionsTableComponent } from './components/nft/nft-auctions-table/nft-auctions-table.component';
 import { NftAuctionsTableItemComponent } from './components/nft/nft-auctions-table-item/nft-auctions-table-item.component';
 import { HomeComponent } from './pages/home/home.component';
+import { HelloComponent } from './components/popup/hello.component';
+import { DialogComponent } from './components/popup/dialog.component';
+import { DialogFooterDirective } from './components/popup/dialog-footer.directive';
+import { DialogHeaderDirective } from './components/popup/dialog-header.directive';
+import { DialogContentDirective } from './components/popup/dialog-content.directive';
 
 @NgModule({
   declarations: [
@@ -28,6 +33,11 @@ import { HomeComponent } from './pages/home/home.component';
     NftHeaderComponent,
     NftAuctionsTableComponent,
     NftAuctionsTableItemComponent,
+    HelloComponent,
+    DialogComponent,
+    DialogFooterDirective,
+    DialogHeaderDirective,
+    DialogContentDirective,
   ],
   imports: [
     CommonModule,
@@ -38,4 +48,4 @@ import { HomeComponent } from './pages/home/home.component';
     AngularSvgIconModule.forRoot(),
   ],
 })
-export class DashboardModule {}
+export class DashboardModule { }

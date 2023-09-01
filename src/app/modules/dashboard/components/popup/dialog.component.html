@@ -1,0 +1,19 @@
+<section
+  class="container bg-white rounded-lg md:max-w-md md:mx-auto p-4 fixed inset-x-0 bottom-0 z-50 mb-4 mx-4 md:relative">
+  <header>
+    <ng-container #headerVcr></ng-container>   
+    <h3 class="font-semibold text-gray-900 dark:text-white" *ngIf="!header?.tpl">{{ title }}</h3>
+    <div class="mt-2 space-x-1 text-xs font-medium text-gray-400 dark:text-night-300">
+      <span> Just Let me Know the number of the programming language you’re interested in!</span>
+    </div>
+  </header>
+
+  <main>
+    <ng-container #contentVcr></ng-container>
+  </main>
+
+  <footer>
+    <!-- <button (click)="close()">Close</button> -->
+    <ng-container #footerVcr></ng-container>
+  </footer>
+</section>
