@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Nft } from '../../models/nft';
+import { DialogComponent } from '../../components/popup/dialog.component';
 
 @Component({
   selector: 'app-nft',
@@ -8,7 +9,18 @@ import { Nft } from '../../models/nft';
 export class HomeComponent implements OnInit {
   nft: Array<Nft>;
 
+  save(data: any, dialog: DialogComponent) {
+    setTimeout(() => {
+      dialog.close();
+    }, 1000);
+  }
+
+  cancel(dialog: DialogComponent) {
+    dialog.close();
+  }
+
   constructor() {
+
     this.nft = [
       {
         id: 34356771,
@@ -38,5 +50,5 @@ export class HomeComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
