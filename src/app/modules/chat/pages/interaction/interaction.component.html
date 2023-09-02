@@ -7,7 +7,7 @@
       </div>
 
       <div class="absolute bottom-0 w-full">
-        <div class="flex mb-5 flex-col px-2 py-2 grid grid-cols-2 gap-4">
+        <div class="flex mb-5 flex-col px-2 py-2 grid grid-cols-2 gap-4 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 sm:grid-cols-1">
           <div *ngFor="let _ of [].constructor(2); let i = index" class="rounded cursor-pointer hover:-translate-y-">
             <div
               class="flex flex-col justify-between p-2 rounded-xl border border-gray-100 bg-sky-50 text-left  row-start-1 row-end-1">
@@ -17,7 +17,7 @@
               </div>
             </div>
           </div>
-          <div *ngFor="let _ of [].constructor(2); let i = index" class="rounded cursor-pointer hover:-translate-y-">
+          <div  *ngFor="let _ of [].constructor(2); let i = index" class="hidden xl:block lg:block rounded cursor-pointer hover:-translate-y-">
             <div
               class="flex flex-col justify-between p-2 rounded-xl border border-gray-100 bg-sky-50 text-left  row-start-1 row-end-1">
               <h2 class="text-xs font-semibold mt-2 text-gray-900 dark:text-night-50">Write a code</h2>
