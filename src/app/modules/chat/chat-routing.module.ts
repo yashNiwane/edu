@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ChatComponent } from './chat.component';
 import { InteractionComponent } from './pages/interaction/interaction.component';
+import { ConvComponent } from './pages/conv/conv.component';
 
 const routes: Routes = [
   {
@@ -11,6 +12,7 @@ const routes: Routes = [
       { path: '', redirectTo: 'interaction', pathMatch: 'full' },
       // { path: 'nfts', component: NftComponent },
       { path: 'interaction', component: InteractionComponent },
+      { path: 'interaction/conv/:id', component: ConvComponent },
       { path: '**', redirectTo: 'error/404' },
     ],
   },

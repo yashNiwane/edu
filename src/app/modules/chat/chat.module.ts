@@ -8,12 +8,16 @@ import { InteractionComponent } from './pages/interaction/interaction.component'
 import { ChatComponent } from './chat.component';
 import { ChatRoutingModule } from './chat-routing.module';
 import { DefaultChatInteractionComponent } from './components/default-chat-interaction/default-chat-interaction.component';
+import { CodeConvComponent } from './components/code-conv/code-conv.component';
+import { ConvComponent } from './pages/conv/conv.component';
 
 @NgModule({
   declarations: [
+    ConvComponent,
     ChatComponent,
     InteractionComponent,
-    DefaultChatInteractionComponent
+    DefaultChatInteractionComponent,
+    CodeConvComponent
   ],
   imports: [
     CommonModule,
@@ -22,6 +26,6 @@ import { DefaultChatInteractionComponent } from './components/default-chat-inter
     HttpClientModule,
     NgApexchartsModule,
     AngularSvgIconModule.forRoot(),
-  ],
+  ]
 })
 export class ChatModule { }
