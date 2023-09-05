@@ -9,19 +9,12 @@ export class Menu {
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Dashboard Dashboard Dashboard',
-          route: '/dashboard/nfts',
+          route: '/chat/interaction/conv/fsdfsd',
         },
         {
           icon: 'assets/icons/outline/message-text.svg',
-          label: 'Auth',
-          route: '/auth',
-          children: [
-            { label: 'Sign up', route: '/auth/sign-up' },
-            { label: 'Sign in', route: '/auth/sign-in' },
-            { label: 'Forgot Password', route: '/auth/forgot-password' },
-            { label: 'New Password', route: '/auth/new-password' },
-            { label: 'Two Steps', route: '/auth/two-steps' },
-          ],
+          label: 'Search for abc 123',
+          route: '/chat/interaction/conv/23dsfsdf',
         },
       ],
     },
@@ -32,17 +25,17 @@ export class Menu {
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Download',
-          route: '/downloads',
+          route: '/chat/interaction/conv/fsfsfsfsd',
         },
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Gift Card',
-          route: '/gift',
+          route: '/chat/interaction/conv/asdasdas',
         },
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Users',
-          route: '/users',
+          route: '/chat/interaction/conv/asdddsdasdas',
         },
       ],
     },
@@ -53,22 +46,17 @@ export class Menu {
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Settings',
-          route: '/settings',
+          route: '/chat/interaction/conv/asdddsdasdas',
         },
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Notifications',
-          route: '/gift',
+          route: '/chat/interaction/conv/asdddsdasdas',
         },
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Folders',
-          route: '/folders',
-          children: [
-            { label: 'Current Files', route: '/folders/current-files' },
-            { label: 'Downloads', route: '/folders/download' },
-            { label: 'Trash', route: '/folders/trash' },
-          ],
+          route: '/chat/interaction/conv/asdddsdasdas'
         },
       ],
     },{

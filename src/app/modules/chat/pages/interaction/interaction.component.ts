@@ -1,13 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-interaction',
   templateUrl: './interaction.component.html',
 })
-export class InteractionComponent implements OnInit {
+export class InteractionComponent {
 
-  constructor() {
+  constructor(private router: Router) {  
   }
 
-  ngOnInit(): void { }
+  initiateChat() {
+    this.router.navigate(['/chat/interaction/conv/asfksdf']);
+  }
 }

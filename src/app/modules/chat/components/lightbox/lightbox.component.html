@@ -1,0 +1,13 @@
+<!-- lightbox.component.html -->
+<div class="fixed inset-0 bg-black opacity-50 z-40" [ngClass]="{'hidden': !showLightbox}" (click)="closeLightbox()"></div>
+<div class="fixed inset-0 flex items-center justify-center z-50" [ngClass]="{'hidden': !showLightbox}">
+  <div class="bg-white p-4 rounded-lg shadow-lg">
+    <!-- Lightbox content here -->
+    <img [src]="lightboxImage" alt="Lightbox Image" class="max-h-screen max-w-screen" />
+    <button (click)="closeLightbox()" class="absolute top-2 right-2 p-2 rounded-full bg-gray-200 hover:bg-gray-300">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</div>

@@ -1,26 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { Nft } from '../../models/nft';
 import { DialogComponent } from '../../components/popup/dialog.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-nft',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+
   nft: Array<Nft>;
 
+  // private router: Router;
+
   save(data: any, dialog: DialogComponent) {
-    setTimeout(() => {
-      dialog.close();
-    }, 1000);
+    this.router.navigate(['/chat/interaction']);
+    // setTimeout(() => {
+    //   dialog.close();
+    // }, 1000);
   }
 
   cancel(dialog: DialogComponent) {
     dialog.close();
   }
 
-  constructor() {
-
+  constructor(private router: Router) {    // private activeRoute: ActivatedRoute) {
+    // this.router = router;
     this.nft = [
       {
         id: 34356771,
@@ -50,5 +56,7 @@ export class HomeComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void { }
+  openPopularChat() {
+    this.router.navigate(['/chat/interaction']);
+  }
 }
