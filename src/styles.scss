@@ -53,3 +53,7 @@
 /** Plugins **/
 @import './assets/styles/apexchart.scss';
 
+
+.lb-loader .lb-cancel{
+	display: none !important;
+}

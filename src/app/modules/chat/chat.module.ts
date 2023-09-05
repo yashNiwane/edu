@@ -10,6 +10,8 @@ import { ChatRoutingModule } from './chat-routing.module';
 import { DefaultChatInteractionComponent } from './components/default-chat-interaction/default-chat-interaction.component';
 import { CodeConvComponent } from './components/code-conv/code-conv.component';
 import { ConvComponent } from './pages/conv/conv.component';
+import { LightboxComponent } from './components/lightbox/lightbox.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,15 @@ import { ConvComponent } from './pages/conv/conv.component';
     ChatComponent,
     InteractionComponent,
     DefaultChatInteractionComponent,
-    CodeConvComponent
+    CodeConvComponent,
+    LightboxComponent    
   ],
   imports: [
     CommonModule,
     ChatRoutingModule,
     SharedModule,
     HttpClientModule,
+    LightboxModule,
     NgApexchartsModule,
     AngularSvgIconModule.forRoot(),
   ]
