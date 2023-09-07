@@ -1,0 +1,14 @@
+.tab-close {
+  color: gray;
+  text-align: right;
+  cursor: pointer;
+}
+
+.active button {
+  border-color: #FFDD00;
+  color: #FFDD00;
+ 
+  svg-icon{
+    color: #FFDD00;
+  }
+}
