@@ -1,0 +1,116 @@
+<div [hidden]="!active" class="pane">
+    <ng-content></ng-content>
+    <div class="space-y-3 px-10 mb-5 text-left relative">
+
+        <button [ngClass]="{ hidden: !isEditOpen }" (click)="toggleForm()" type="button"
+            class="absolute border-gray-400 right-10 top-0 mb-10 flex justify-center rounded-md border border-transparent  py-2 px-6 text-sm font-medium text-gray-500 hover:bg-primary-400 hover:text-white hover:shadow-lg hover:border-primary-500">
+            <svg-icon src="assets/icons/edit.svg" [svgClass]="'h-5 w-5 mr-2'">
+            </svg-icon> Edit
+        </button>
+        <form [hidden]="isEditOpen" class="my-10 space-y-6">
+            <h2 class="text-lg font-regular text-gray-700 dark:text-white">
+                Personal Information
+            </h2>
+            <div class="w-full flex">
+                <div class="flex-col w-full">
+                    <div class="relative m-4">
+                        <input type="text" id="fullname" class="peer block" placeholder=" " />
+                        <label for="fullname"
+                            class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                            Full Name
+                        </label>
+                    </div>
+                    <div class="relative m-4">
+                        <input type="text" id="email" class="peer block" placeholder=" " />
+                        <label for="email"
+                            class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                            Email address
+                        </label>
+                    </div>
+                </div>
+                <div class="flex-col w-full">
+
+                    <div class="relative m-4">
+                        <input type="password" id="password" class="peer block" placeholder=" " />
+                        <label for="password"
+                            class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-600 dark:bg-night-700 dark:text-night-200">
+                            Phone
+                        </label>
+                    </div>
+                    <div class="relative m-4">
+                        <textarea type="text" id="email" class="peer block" placeholder=" "></textarea>
+                        <label for="email"
+                            class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
+                            Bio
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex w-4/12 ml-auto">
+
+
+                <button (click)="toggleForm()" type="button"
+                    class="group relative mb-10 flex w-44 justify-center rounded-md border border-transparent bg-gray-300 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 hover:bg-gray-400">
+                    Cancel
+                </button>
+
+                <button type="button"
+                    class="ml-10 group relative mb-10 flex w-44 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
+                    Save
+                </button>
+
+            </div>
+        </form>
+        <form [hidden]="!isEditOpen" class="my-10 space-y-6">
+            <h2 class="text-lg font-regular text-gray-700 dark:text-white">
+                Personal Information
+            </h2>
+            <div class="w-full flex">
+                <div class="flex-col w-full">
+                    <div class="relative m-4">
+                        <label for="fullname" class="z-10 bg-white text-sm text-gray-500">
+                            Full Name
+                        </label>
+                        <h3>Sarah Smith</h3>
+                    </div>
+                    <div class="relative m-4">
+                        <label for="fullname" class="z-10 bg-white text-sm text-gray-500">
+                            Email address
+                        </label>
+                        <h3>Sarah@dsfds.com</h3>
+                    </div>
+                </div>
+                <div class="flex-col w-full">
+
+                    <div class="relative m-4">
+                        <label for="fullname" class="z-10 bg-white text-sm text-gray-500">
+                            Phone
+                        </label>
+                        <h3>+91 39993 09030</h3>
+                    </div>
+                    <div class="relative m-4">
+                        
+                        <label for="fullname" class="z-10 bg-white text-sm text-gray-500">
+                            Bio
+                        </label>
+                        <h3>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </h3>
+                    </div>
+                </div>
+            </div>
+            <div [ngClass]="{ hidden: isEditOpen }" class="flex w-4/12 ml-auto">
+
+
+                <button (click)="toggleForm()" type="button"
+                    class="group relative mb-10 flex w-44 justify-center rounded-md border border-transparent bg-gray-300 py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 hover:bg-gray-400">
+                    Cancel
+                </button>
+
+                <button type="button"
+                    class="ml-10 group relative mb-10 flex w-44 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
+                    Save
+                </button>
+
+            </div>
+        </form>
+    </div>
+</div>

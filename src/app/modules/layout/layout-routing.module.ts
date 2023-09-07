@@ -13,6 +13,11 @@ const routes: Routes = [
     component: LayoutComponent,
     loadChildren: () => import('../chat/chat.module').then((m) => m.ChatModule),
   },
+  {
+    path: 'user',
+    component: LayoutComponent,
+    loadChildren: () => import('../user/user.module').then((m) => m.UserModule),
+  },
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: '**', redirectTo: 'error/404' },
 ];
@@ -21,4 +26,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class LayoutRoutingModule {}
+export class LayoutRoutingModule { }
