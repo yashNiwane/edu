@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './user.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { PurchaseComponent } from './pages/purchase/purchase.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
     component: UserComponent,
     children: [      
       { path: 'profile', component: ProfileComponent },
+      { path: 'purchase', component: PurchaseComponent },
       { path: '**', redirectTo: 'error/404' },
     ],
   },

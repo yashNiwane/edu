@@ -11,14 +11,17 @@ import { UserRoutingModule } from './user-routing.module';
 import { ProfileTabsComponent } from './components/tabs/profile.tabs.component';
 import { DetailsComponent } from './components/tabs/details/details.component';
 import { TransactionsComponent } from './components/tabs/transactions/transactions.component';
+import { PurchaseComponent } from './pages/purchase/purchase.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     UserComponent,
     ProfileComponent,
+    PurchaseComponent,
     ProfileTabsComponent,   
     TransactionsComponent,   
-    DetailsComponent, TransactionsComponent  
+    DetailsComponent, TransactionsComponent, PurchaseComponent  
   ],
   imports: [
     CommonModule,
@@ -28,6 +31,7 @@ import { TransactionsComponent } from './components/tabs/transactions/transactio
     LightboxModule,
     NgApexchartsModule,
     AngularSvgIconModule.forRoot(),
+    FormsModule
   ]
 })
 export class UserModule { }
