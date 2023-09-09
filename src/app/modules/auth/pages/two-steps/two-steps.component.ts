@@ -5,5 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './two-steps.component.html',
   styleUrls: ['./two-steps.component.scss'],
 })
-export class TwoStepsComponent {
-}
+export class TwoStepsComponent {}

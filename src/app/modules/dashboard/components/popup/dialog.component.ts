@@ -1,15 +1,7 @@
 /* eslint-disable @angular-eslint/component-selector */
 /* eslint-disable @angular-eslint/component-selector */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import {
-  Component,
-  ContentChild,
-  ElementRef,
-  HostListener,
-  Input,
-  ViewChild,
-  ViewContainerRef,
-} from '@angular/core';
+import { Component, ContentChild, ElementRef, HostListener, Input, ViewChild, ViewContainerRef } from '@angular/core';
 import { DialogContentDirective } from './dialog-content.directive';
 import { DialogHeaderDirective } from './dialog-header.directive';
 import { DialogFooterDirective } from './dialog-footer.directive';
@@ -55,9 +47,9 @@ export class DialogComponent {
           this.element.removeAttribute('closing');
         }
       },
-      { once: true }
+      { once: true },
     );
-  
+
     this.element.setAttribute('closing', 'true');
     this.clear();
   }

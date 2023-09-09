@@ -8,7 +8,7 @@ import { MenuItem, SubMenuItem } from 'src/app/core/models/menu.model';
   templateUrl: './navbar-mobile-menu.component.html',
   styleUrls: ['./navbar-mobile-menu.component.scss'],
 })
-export class NavbarMobileMenuComponent{
+export class NavbarMobileMenuComponent {
   public pagesMenu$: Observable<MenuItem[]> = new Observable<MenuItem[]>();
   public showSideBar$: Observable<boolean> = new Observable<boolean>();
 

@@ -3,14 +3,14 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/luciano-work/angular-tailwind/stargazers">
-        <img height= "24" src="https://img.shields.io/github/stars/luciano-work/angular-tailwind?colorA=1e1e28&colorB=c9cbff&style=for-the-badge">
+    <a href="https://github.com/luciano-work/edi-chat/stargazers">
+        <img height= "24" src="https://img.shields.io/github/stars/luciano-work/edi-chat?colorA=1e1e28&colorB=c9cbff&style=for-the-badge">
     </a>
-    <a href="https://github.com/luciano-work/angular-tailwind/issues">
-        <img height= "24" src="https://img.shields.io/github/issues/luciano-work/angular-tailwind?colorA=1e1e28&colorB=f7be95&style=for-the-badge">
+    <a href="https://github.com/luciano-work/edi-chat/issues">
+        <img height= "24" src="https://img.shields.io/github/issues/luciano-work/edi-chat?colorA=1e1e28&colorB=f7be95&style=for-the-badge">
     </a>
-    <a href="https://github.com/luciano-work/angular-tailwind/contributors">
-        <img height= "24" src="https://img.shields.io/github/contributors/luciano-work/angular-tailwind?colorA=1e1e28&colorB=b1e1a6&style=for-the-badge">
+    <a href="https://github.com/luciano-work/edi-chat/contributors">
+        <img height= "24" src="https://img.shields.io/github/contributors/luciano-work/edi-chat?colorA=1e1e28&colorB=b1e1a6&style=for-the-badge">
     </a>
 </p>
 
@@ -21,7 +21,7 @@ I have created this project to learning more about Tailwind css using my favouri
 
 <b><img src="https://cdn-icons-png.flaticon.com/512/6897/6897039.png" width="14"/> The project is not finished yet!</b>
 
-See [Demo](https://angular-tailwind-six.vercel.app) page.
+See [Demo](https://edi-chat-six.vercel.app) page.
 
 <p>
   <img alt="Preview" src="src/assets/preview/preview.png">

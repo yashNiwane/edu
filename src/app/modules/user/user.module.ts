@@ -19,9 +19,11 @@ import { FormsModule } from '@angular/forms';
     UserComponent,
     ProfileComponent,
     PurchaseComponent,
-    ProfileTabsComponent,   
-    TransactionsComponent,   
-    DetailsComponent, TransactionsComponent, PurchaseComponent  
+    ProfileTabsComponent,
+    TransactionsComponent,
+    DetailsComponent,
+    TransactionsComponent,
+    PurchaseComponent,
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,7 @@ import { FormsModule } from '@angular/forms';
     LightboxModule,
     NgApexchartsModule,
     AngularSvgIconModule.forRoot(),
-    FormsModule
-  ]
+    FormsModule,
+  ],
 })
-export class UserModule { }
+export class UserModule {}

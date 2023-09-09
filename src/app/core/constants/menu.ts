@@ -56,10 +56,11 @@ export class Menu {
         {
           icon: 'assets/icons/outline/message-text.svg',
           label: 'Folders',
-          route: '/chat/interaction/conv/asdddsdasdas'
+          route: '/chat/interaction/conv/asdddsdasdas',
         },
       ],
-    },{
+    },
+    {
       group: 'Sup',
       separator: true,
       items: [
@@ -84,7 +85,8 @@ export class Menu {
           ],
         },
       ],
-    },{
+    },
+    {
       group: 'Sup',
       separator: true,
       items: [
@@ -109,7 +111,8 @@ export class Menu {
           ],
         },
       ],
-    },{
+    },
+    {
       group: 'Sup',
       separator: true,
       items: [

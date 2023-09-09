@@ -20,7 +20,7 @@ import { LightboxModule } from 'ngx-lightbox';
     InteractionComponent,
     DefaultChatInteractionComponent,
     CodeConvComponent,
-    LightboxComponent    
+    LightboxComponent,
   ],
   imports: [
     CommonModule,
@@ -30,6 +30,6 @@ import { LightboxModule } from 'ngx-lightbox';
     LightboxModule,
     NgApexchartsModule,
     AngularSvgIconModule.forRoot(),
-  ]
+  ],
 })
-export class ChatModule { }
+export class ChatModule {}

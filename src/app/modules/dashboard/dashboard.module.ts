@@ -48,4 +48,4 @@ import { DialogContentDirective } from './components/popup/dialog-content.direct
     AngularSvgIconModule.forRoot(),
   ],
 })
-export class DashboardModule { }
+export class DashboardModule {}

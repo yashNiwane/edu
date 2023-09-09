@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     path: '',
     component: UserComponent,
-    children: [      
+    children: [
       { path: 'profile', component: ProfileComponent },
       { path: 'purchase', component: PurchaseComponent },
       { path: '**', redirectTo: 'error/404' },

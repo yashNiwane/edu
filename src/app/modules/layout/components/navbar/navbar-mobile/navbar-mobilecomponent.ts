@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MenuService } from '../../../services/menu.service';
 
@@ -7,7 +7,7 @@ import { MenuService } from '../../../services/menu.service';
   templateUrl: './navbar-mobile.component.html',
   styleUrls: ['./navbar-mobile.component.scss'],
 })
-export class NavbarMobileComponent{
+export class NavbarMobileComponent {
   public showMobileMenu$: Observable<boolean> = new Observable<boolean>();
 
   constructor(private menuService: MenuService) {

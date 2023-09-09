@@ -3,15 +3,11 @@
     <h2 class="mb-1 text-3xl font-semibold text-gray-700 dark:text-white">
       Hey<span class="text-primary-500">👋 </span>
     </h2>
-    <p class="text-sm text-gray-400 dark:text-night-200">Enter the information you entered while registering.</p>    
+    <p class="text-sm text-gray-400 dark:text-night-200">Enter the information you entered while registering.</p>
   </div>
 
   <div class="space-y-3 text-left">
-
-
-    <h2 class="text-2xl font-regular text-gray-700 dark:text-white">
-      Sign Up
-    </h2>
+    <h2 class="font-regular text-2xl text-gray-700 dark:text-white">Sign Up</h2>
     <div class="relative">
       <input type="text" id="fullname" class="peer block" placeholder=" " />
       <label
@@ -62,7 +58,11 @@
 
   <div class="flex items-center justify-between space-x-3">
     <div class="flex items-center">
-      <input class="h-6 w-6 text-primary-500  rounded cursor-pointer" id="accept-term" name="accept-term" type="checkbox" />
+      <input
+        class="h-6 w-6 cursor-pointer rounded text-primary-500"
+        id="accept-term"
+        name="accept-term"
+        type="checkbox" />
       <label for="accept-term" class="ml-2 block text-sm text-gray-400 dark:text-night-200">
         I Accept the
         <a class="font-medium text-gray-700 underline hover:text-primary-400"> Terms </a>
@@ -84,23 +84,36 @@
   </div>
 
   <div class="grid grid-cols-3 gap-3 px-20">
-    <div class="flex justify-center items-center"><button type="button" routerLink="/dashboard"
+    <div class="flex items-center justify-center">
+      <button
+        type="button"
+        routerLink="/dashboard"
         class="justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-gray-50 dark:border-night-500 dark:bg-night-700 dark:text-night-200 dark:hover:bg-night-600">
         <svg-icon src="assets/icons/google-logo.svg" [svgClass]="'h-6 w-6'"></svg-icon>
-      </button></div>
-    <div  class="flex justify-center items-center"><button type="button" routerLink="/dashboard"
+      </button>
+    </div>
+    <div class="flex items-center justify-center">
+      <button
+        type="button"
+        routerLink="/dashboard"
         class="justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-gray-50 dark:border-night-500 dark:bg-night-700 dark:text-night-200 dark:hover:bg-night-600">
         <svg-icon src="assets/icons/apple-logo.svg" [svgClass]="'h-6 w-6'"></svg-icon>
-      </button></div>
+      </button>
+    </div>
 
-    <div  class="flex justify-center items-center"><button type="button" routerLink="/dashboard"
+    <div class="flex items-center justify-center">
+      <button
+        type="button"
+        routerLink="/dashboard"
         class="justify-center rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-gray-50 dark:border-night-500 dark:bg-night-700 dark:text-night-200 dark:hover:bg-night-600">
         <svg-icon src="assets/icons/twiiter-logo.svg" [svgClass]="'h-6 w-6'"></svg-icon>
-      </button></div>
+      </button>
+    </div>
   </div>
 
   <!-- Sign-up -->
   <div class="text-sm text-gray-400 dark:text-night-200">
-    Already have an Account? <a routerLink="/auth/sign-in" class="text-gray-700 underline hover:text-primary-400">Sign in</a>
+    Already have an Account?
+    <a routerLink="/auth/sign-in" class="text-gray-700 underline hover:text-primary-400">Sign in</a>
   </div>
 </form>

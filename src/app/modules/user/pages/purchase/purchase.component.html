@@ -1,95 +1,114 @@
-<div class="flex items-center justify-center  bg-gray-100 text-gray-800 p-8">
-
+<div class="flex items-center justify-center bg-gray-100 p-8 text-gray-800">
   <!-- Component Start -->
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-8 w-full max-w-screen-lg">
+  <div class="grid w-full max-w-screen-lg gap-8 md:grid-cols-2 lg:grid-cols-3">
     <div class="lg:col-span-2">
       <h2 class="text-sm font-medium">Purchase Token</h2>
-      <div class="bg-white rounded mt-4 shadow-lg">
-        <div class="flex p-10 mb-10">
+      <div class="mt-4 rounded bg-white shadow-lg">
+        <div class="mb-10 flex p-10">
           <div class="w-1/2">
             <div class="relative mb-2">
-              <div [ngClass]="paymentSteps === 1 || paymentSteps === 2 ? 'bg-green-500' : 'bg-gray-500'"
-                class="w-10 h-10 mx-auto rounded-full text-lg text-white flex items-center">
-                <span class="text-center text-white w-full">
-                  <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+              <div
+                [ngClass]="paymentSteps === 1 || paymentSteps === 2 ? 'bg-green-500' : 'bg-gray-500'"
+                class="mx-auto flex h-10 w-10 items-center rounded-full text-lg text-white">
+                <span class="w-full text-center text-white">
+                  <svg
+                    class="w-full fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
                     height="24">
-                    <path class="heroicon-ui"
+                    <path
+                      class="heroicon-ui"
                       d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5c0-1.1.9-2 2-2zm14 8V5H5v6h14zm0 2H5v6h14v-6zM8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0 8a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
                   </svg>
                 </span>
               </div>
             </div>
 
-            <div class="text-xs text-center md:text-base">Select Tokens</div>
+            <div class="text-center text-xs md:text-base">Select Tokens</div>
           </div>
 
           <div class="w-1/2">
             <div class="relative mb-2">
-              <div class="absolute flex align-center items-center align-middle content-center"
+              <div
+                class="align-center absolute flex content-center items-center align-middle"
                 style="width: calc(100% - 2.5rem - 1rem); top: 50%; transform: translate(-50%, -50%)">
-                <div class="w-full bg-gray-200 rounded items-center align-middle align-center flex-1">
-                  <div [ngClass]="paymentSteps === 1 || paymentSteps === 2 ? 'bg-green-500' : 'bg-gray-300'"
-                    class="w-0  py-1 rounded" style="width: 100%;"></div>
+                <div class="align-center w-full flex-1 items-center rounded bg-gray-200 align-middle">
+                  <div
+                    [ngClass]="paymentSteps === 1 || paymentSteps === 2 ? 'bg-green-500' : 'bg-gray-300'"
+                    class="w-0 rounded py-1"
+                    style="width: 100%"></div>
                 </div>
               </div>
 
-              <div [ngClass]="paymentSteps === 1 || paymentSteps === 2 ? 'bg-green-500' : 'bg-gray-300'"
-                class="w-10 h-10 mx-auto rounded-full text-lg text-white flex items-center">
-                <span class="text-center text-white w-full">
-                  <svg class="w-full fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24"
+              <div
+                [ngClass]="paymentSteps === 1 || paymentSteps === 2 ? 'bg-green-500' : 'bg-gray-300'"
+                class="mx-auto flex h-10 w-10 items-center rounded-full text-lg text-white">
+                <span class="w-full text-center text-white">
+                  <svg
+                    class="w-full fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
                     height="24">
-                    <path class="heroicon-ui"
+                    <path
+                      class="heroicon-ui"
                       d="M19 10h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 0 1 0-2h2V8a1 1 0 0 1 2 0v2zM9 12A5 5 0 1 1 9 2a5 5 0 0 1 0 10zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm8 11a1 1 0 0 1-2 0v-2a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v2a1 1 0 0 1-2 0v-2a5 5 0 0 1 5-5h5a5 5 0 0 1 5 5v2z" />
                   </svg>
                 </span>
               </div>
             </div>
 
-            <div class="text-xs text-center md:text-base">Add Billing</div>
+            <div class="text-center text-xs md:text-base">Add Billing</div>
           </div>
         </div>
         <div *ngIf="paymentSteps === 0">
-
-          <div class="mx-auto w-full px-6  range-slider">
-            <h3 class="text-left w-full font-semibold ">Token</h3>
+          <div class="range-slider mx-auto w-full px-6">
+            <h3 class="w-full text-left font-semibold">Token</h3>
             <div class="value-display">
               <div class="bubble" [style.left.%]="getBubblePosition(slider1)">{{ rangeValues[0] }}</div>
             </div>
-            <input type="range" [min]="minValue" [max]="maxValue" [(ngModel)]="rangeValues[0]" class="custom-slider"
+            <input
+              type="range"
+              [min]="minValue"
+              [max]="maxValue"
+              [(ngModel)]="rangeValues[0]"
+              class="custom-slider"
               #slider1 />
 
             <div class="ml-1 flex w-full justify-between">
-              <div class="mr-auto flex-col text-primary-500 text-center text-xs" *ngFor="let mark of rulerMarks">|</div>
+              <div class="mr-auto flex-col text-center text-xs text-primary-500" *ngFor="let mark of rulerMarks">|</div>
             </div>
-            <div class="flex w-full justify-between mt-1">
+            <div class="mt-1 flex w-full justify-between">
               <div class="mr-auto text-center text-xs text-gray-600" *ngFor="let mark of rulerMarks">{{ mark }}</div>
             </div>
           </div>
 
-          <div class="mx-auto w-full px-6  range-slider p-10">
-            <h3 class="text-left w-full font-semibold mt-10">Questions</h3>
+          <div class="range-slider mx-auto w-full p-10 px-6">
+            <h3 class="mt-10 w-full text-left font-semibold">Questions</h3>
             <div class="value-display">
               <div class="bubble" [style.left.%]="getBubblePosition(slider1)">{{ rangeValues[0] }}k</div>
             </div>
-            <input type="range" [min]="minValue" [max]="maxValue" [(ngModel)]="rangeValues[0]" class="custom-slider"
+            <input
+              type="range"
+              [min]="minValue"
+              [max]="maxValue"
+              [(ngModel)]="rangeValues[0]"
+              class="custom-slider"
               #slider1 />
 
             <div class="ml-1 flex w-full justify-between">
-              <div class="mr-auto flex-col text-primary-500 text-center text-xs" *ngFor="let mark of rulerMarks">|</div>
+              <div class="mr-auto flex-col text-center text-xs text-primary-500" *ngFor="let mark of rulerMarks">|</div>
             </div>
-            <div class="flex w-full justify-between mt-1">
+            <div class="mt-1 flex w-full justify-between">
               <div class="mr-auto text-center text-xs text-gray-600" *ngFor="let mark of rulerMarks">{{ mark }}k</div>
             </div>
           </div>
         </div>
 
         <div *ngIf="!(paymentSteps === 0)">
-
           <div class="space-y-3 px-5 text-left">
-
-            <h2 class="text-2xl font-regular text-gray-700 dark:text-white">
-              Billing Details
-            </h2>
+            <h2 class="font-regular text-2xl text-gray-700 dark:text-white">Billing Details</h2>
             <div class="relative">
               <input type="text" id="fullname" class="peer block" placeholder=" " />
               <label
@@ -99,7 +118,7 @@
               </label>
             </div>
             <div class="relative">
-              <textarea type="text" id="email" class="peer block" placeholder=" " ></textarea>
+              <textarea type="text" id="email" class="peer block" placeholder=" "></textarea>
               <label
                 for="email"
                 class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-500 dark:bg-night-700 dark:text-night-200">
@@ -144,67 +163,80 @@
                 for="password"
                 class="absolute top-2 left-1 z-10 origin-[0] -translate-y-4 scale-95 transform bg-white px-2 text-sm text-gray-500 duration-300 peer-placeholder-shown:top-1/2 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:scale-100 peer-focus:top-2 peer-focus:-translate-y-4 peer-focus:scale-95 peer-focus:px-2 peer-focus:text-primary-600 dark:bg-night-700 dark:text-night-200">
                 Phone
-              </label>            
+              </label>
             </div>
-           
           </div>
         </div>
 
-        <div class="flex w-44 ml-auto mr-10 mt-5">
-          <button (click)="moveBack()" [disabled]="!(paymentSteps === 1 || paymentSteps === 2)" type="button"
-          [ngClass]=" (paymentSteps === 1 || paymentSteps === 2) ? 'bg-primary-500 hover:bg-primary-400 text-gray-800 ' : 'bg-gray-500 text-white'"
-            class="group relative mb-10  w-35 justify-center rounded-md border border-transparent py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 ">
+        <div class="ml-auto mr-10 mt-5 flex w-44">
+          <button
+            (click)="moveBack()"
+            [disabled]="!(paymentSteps === 1 || paymentSteps === 2)"
+            type="button"
+            [ngClass]="
+              paymentSteps === 1 || paymentSteps === 2
+                ? 'bg-primary-500 text-gray-800 hover:bg-primary-400 '
+                : 'bg-gray-500 text-white'
+            "
+            class="w-35 group relative mb-10 justify-center rounded-md border border-transparent py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2">
             Back
           </button>
 
-          <button (click)="moveNext()" *ngIf="!(paymentSteps === 1 || paymentSteps === 2)" type="button"
-            class="ml-10 group relative mb-10  w-35 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
+          <button
+            (click)="moveNext()"
+            *ngIf="!(paymentSteps === 1 || paymentSteps === 2)"
+            type="button"
+            class="w-35 group relative ml-10 mb-10 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
             Next
           </button>
 
-          <button (click)="moveFinish()" *ngIf="(paymentSteps === 1 || paymentSteps === 2)" type="button"
-            class="ml-10 group relative mb-10  w-35 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
+          <button
+            (click)="moveFinish()"
+            *ngIf="paymentSteps === 1 || paymentSteps === 2"
+            type="button"
+            class="w-35 group relative ml-10 mb-10 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
             Finish
           </button>
-
         </div>
-
       </div>
     </div>
     <div>
       <h2 class="text-sm font-medium">Purchase Summary</h2>
-      <div class="bg-white rounded mt-4 shadow-lg py-6">
+      <div class="mt-4 rounded bg-white py-6 shadow-lg">
         <div class="px-8">
           <div class="flex items-end">
-            <h2 class="text-sm font-medium focus:outline-none" name="" id="">Tokens {{rangeValues[0]}}
-            </h2>
-            <span class="text-sm ml-auto font-semibold">${{rangeValues[0]*2}}</span>
+            <h2 class="text-sm font-medium focus:outline-none" name="" id="">Tokens {{ rangeValues[0] }}</h2>
+            <span class="ml-auto text-sm font-semibold">${{ rangeValues[0] * 2 }}</span>
             <!-- <span class="text-xs text-gray-500 mb-px">/mo</span> -->
           </div>
-          <span class="text-xs text-gray-500 mt-2">Questions {{rangeValues[0]}}k</span>
+          <span class="mt-2 text-xs text-gray-500">Questions {{ rangeValues[0] }}k</span>
         </div>
-        <div class="px-8 mt-4">
+        <div class="mt-4 px-8">
           <div class="flex items-end justify-between">
             <span class="text-sm font-semibold">Tax</span>
-            <span class="text-sm text-gray-500 mb-px">10%</span>
+            <span class="mb-px text-sm text-gray-500">10%</span>
           </div>
         </div>
-        <div class="px-8 mt-4 border-t pt-4">
+        <div class="mt-4 border-t px-8 pt-4">
           <div class="flex items-end justify-between">
             <span class="font-semibold">Today you pay (USD)</span>
-            <span class="font-semibold">${{rangeValues[0]*20}}</span>
+            <span class="font-semibold">${{ rangeValues[0] * 20 }}</span>
           </div>
           <!-- <span class="text-xs text-gray-500 mt-2">After 1 month free: $22/mo.</span> -->
         </div>
-        <div class="flex items-center px-8 mt-8">
-          <input id="termsConditions" type="checkbox">
-          <label class="text-xs text-gray-500 ml-2" for="termsConditions">I agree to the terms and conditions.</label>
+        <div class="mt-8 flex items-center px-8">
+          <input id="termsConditions" type="checkbox" />
+          <label class="ml-2 text-xs text-gray-500" for="termsConditions">I agree to the terms and conditions.</label>
         </div>
         <div class="flex flex-col px-8 pt-4">
-          <button [disabled]="!(paymentSteps === 2)"
-            [ngClass]=" paymentSteps === 2 ? 'bg-primary-500 hover:bg-primary-400 text-gray-800 ' : 'bg-gray-500 text-white'"
-            class="flex items-center justify-center disable:bg-gray-100 font-medium w-full h-10 rounded">Pay
-            Now</button>
+          <button
+            [disabled]="!(paymentSteps === 2)"
+            [ngClass]="
+              paymentSteps === 2 ? 'bg-primary-500 text-gray-800 hover:bg-primary-400 ' : 'bg-gray-500 text-white'
+            "
+            class="disable:bg-gray-100 flex h-10 w-full items-center justify-center rounded font-medium">
+            Pay Now
+          </button>
           <!-- <button class="text-xs text-blue-500 mt-3 underline">Have a coupon code?</button> -->
         </div>
       </div>

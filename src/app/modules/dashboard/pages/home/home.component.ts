@@ -5,13 +5,11 @@ import { DialogComponent } from '../../components/popup/dialog.component';
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-nft',
   templateUrl: './home.component.html',
 })
 export class HomeComponent {
-
   nft: Array<Nft>;
 
   save(data: any, dialog: DialogComponent) {
@@ -22,7 +20,8 @@ export class HomeComponent {
     dialog.close();
   }
 
-  constructor(private router: Router) {    // private activeRoute: ActivatedRoute) {
+  constructor(private router: Router) {
+    // private activeRoute: ActivatedRoute) {
     // this.router = router;
     this.nft = [
       {

@@ -8,7 +8,7 @@ import { SubMenuItem } from 'src/app/core/models/menu.model';
   templateUrl: './navbar-mobile-submenu.component.html',
   styleUrls: ['./navbar-mobile-submenu.component.scss'],
 })
-export class NavbarMobileSubmenuComponent{
+export class NavbarMobileSubmenuComponent {
   @Input() public submenu = <SubMenuItem>{};
 
   constructor(private menuService: MenuService) {}

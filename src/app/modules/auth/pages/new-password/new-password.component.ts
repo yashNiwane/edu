@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './new-password.component.html',
   styleUrls: ['./new-password.component.scss'],
 })
-export class NewPasswordComponent{
+export class NewPasswordComponent {
   passwordTextType!: boolean;
 
   togglePasswordTextType() {
