@@ -27,7 +27,13 @@
     "prettier": "prettier --config ./.prettierrc --write \"src/{app,environments}/**/*{.ts,.html,.scss,.json}\"",
     "prettier:verify": "prettier --config ./.prettierrc --check \"src/{app,environments}/**/*{.ts,.html,.scss,.json}\"",
     "prettier:staged": "pretty-quick --staged",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "lint-staged": {
+      "src/**/*.{ts,html,scss}": [
+        "ng lint", 
+        "ng test"
+      ]
+    }
   },
   "private": true,
   "dependencies": {
@@ -70,12 +76,14 @@
     "autoprefixer": "^10.4.7",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.47.0",
+    "husky": "^8.0.3",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "lint-staged": "^14.0.1",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
     "prettier-plugin-tailwindcss": "^0.1.12",
