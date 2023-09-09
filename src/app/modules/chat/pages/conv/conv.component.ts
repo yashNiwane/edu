@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, OnInit } from '@angular/core';
-import { BrowserModule, DomSanitizer } from '@angular/platform-browser'
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser'
 import { Lightbox } from 'ngx-lightbox';
 
 @Component({

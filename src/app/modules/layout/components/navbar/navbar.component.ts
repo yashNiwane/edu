@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { MenuService } from '../../services/menu.service';
 
 @Component({
@@ -6,10 +6,8 @@ import { MenuService } from '../../services/menu.service';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
   constructor(private menuService: MenuService) {}
-
-  ngOnInit(): void {}
 
   public toggleMobileMenu(): void {
     this.menuService.showMobileMenu = true;

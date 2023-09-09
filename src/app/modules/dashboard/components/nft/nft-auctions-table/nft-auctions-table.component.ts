@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+/* eslint-disable @angular-eslint/component-selector */
+import { Component } from '@angular/core';
 import { Nft } from '../../../models/nft';
 
 @Component({
   selector: '[nft-auctions-table]',
   templateUrl: './nft-auctions-table.component.html',
 })
-export class NftAuctionsTableComponent implements OnInit {
+export class NftAuctionsTableComponent{
   public activeAuction: Nft[] = [];
 
   constructor() {
@@ -72,6 +73,4 @@ export class NftAuctionsTableComponent implements OnInit {
       },
     ];
   }
-
-  ngOnInit(): void {}
 }

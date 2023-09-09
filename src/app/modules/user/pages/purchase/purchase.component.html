@@ -151,18 +151,18 @@
         </div>
 
         <div class="flex w-44 ml-auto mr-10 mt-5">
-          <button (click)="moveBack()" [disabled]="!(paymentSteps == 1 || paymentSteps == 2)" type="button"
+          <button (click)="moveBack()" [disabled]="!(paymentSteps === 1 || paymentSteps === 2)" type="button"
           [ngClass]=" (paymentSteps === 1 || paymentSteps === 2) ? 'bg-primary-500 hover:bg-primary-400 text-gray-800 ' : 'bg-gray-500 text-white'"
             class="group relative mb-10  w-35 justify-center rounded-md border border-transparent py-2 px-4 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 ">
             Back
           </button>
 
-          <button (click)="moveNext()" *ngIf="!(paymentSteps == 1 || paymentSteps == 2)" type="button"
+          <button (click)="moveNext()" *ngIf="!(paymentSteps === 1 || paymentSteps === 2)" type="button"
             class="ml-10 group relative mb-10  w-35 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
             Next
           </button>
 
-          <button (click)="moveFinish()" *ngIf="(paymentSteps == 1 || paymentSteps == 2)" type="button"
+          <button (click)="moveFinish()" *ngIf="(paymentSteps === 1 || paymentSteps === 2)" type="button"
             class="ml-10 group relative mb-10  w-35 justify-center rounded-md border border-transparent bg-primary-500 py-2 px-4 text-sm font-medium text-black focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 hover:bg-primary-400">
             Finish
           </button>
@@ -201,7 +201,7 @@
           <label class="text-xs text-gray-500 ml-2" for="termsConditions">I agree to the terms and conditions.</label>
         </div>
         <div class="flex flex-col px-8 pt-4">
-          <button [disabled]="!(paymentSteps == 2)"
+          <button [disabled]="!(paymentSteps === 2)"
             [ngClass]=" paymentSteps === 2 ? 'bg-primary-500 hover:bg-primary-400 text-gray-800 ' : 'bg-gray-500 text-white'"
             class="flex items-center justify-center disable:bg-gray-100 font-medium w-full h-10 rounded">Pay
             Now</button>

@@ -1,3 +1,6 @@
+/* eslint-disable @angular-eslint/component-selector */
+/* eslint-disable @angular-eslint/component-selector */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import {
   Component,
   ContentChild,

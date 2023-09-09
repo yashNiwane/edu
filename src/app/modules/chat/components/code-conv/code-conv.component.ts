@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-declare var Prism: any;
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component, OnInit } from '@angular/core';
+declare let Prism: any;
 @Component({
   selector: 'app-code-conv',
   templateUrl: './code-conv.component.html',
   styleUrls: ['./code-conv.component.scss']
 })
-export class CodeConvComponent {
+export class CodeConvComponent implements OnInit{
   code = ``;
-
-  constructor() { }
 
   ngOnInit(): void {
 
@@ -40,13 +41,13 @@ export class CodeConvComponent {
     export class ChatRoutingModule {}
     `;
 
-    var NEW_LINE_EXP = /\n(?!$)/g;
-    var lineNumbersWrapper;
+    const NEW_LINE_EXP = /\n(?!$)/g;
+    let lineNumbersWrapper;
 
     Prism.hooks.add('after-tokenize', function (env: any) {
-      var match = env.code.match(NEW_LINE_EXP);
-      var linesNum = match ? match.length + 1 : 1;
-      var lines = new Array(linesNum + 1).join('<span></span>');
+      const match = env.code.match(NEW_LINE_EXP);
+      const linesNum = match ? match.length + 1 : 1;
+      const lines = new Array(linesNum + 1).join('<span></span>');
 
       lineNumbersWrapper = `<span aria-hidden="true" class="line-numbers-rows " style="left:-0.8rem">${lines}</span>`;
     });

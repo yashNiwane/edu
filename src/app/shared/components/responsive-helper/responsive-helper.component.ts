@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -6,10 +7,6 @@ import { environment } from 'src/environments/environment';
   templateUrl: './responsive-helper.component.html',
   styleUrls: ['./responsive-helper.component.scss'],
 })
-export class ResponsiveHelperComponent implements OnInit {
+export class ResponsiveHelperComponent{
   public env: any = environment;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

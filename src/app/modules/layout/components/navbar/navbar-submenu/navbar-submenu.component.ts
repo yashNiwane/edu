@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+/* eslint-disable @angular-eslint/component-selector */
+import { Component, Input } from '@angular/core';
 import { SubMenuItem } from 'src/app/core/models/menu.model';
 
 @Component({
@@ -6,10 +7,6 @@ import { SubMenuItem } from 'src/app/core/models/menu.model';
   templateUrl: './navbar-submenu.component.html',
   styleUrls: ['./navbar-submenu.component.scss'],
 })
-export class NavbarSubmenuComponent implements OnInit {
+export class NavbarSubmenuComponent{
   @Input() public submenu = <SubMenuItem[]>{};
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }

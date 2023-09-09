@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MenuItem, SubMenuItem } from 'src/app/core/models/menu.model';
 import { MenuService } from '../../../services/menu.service';
@@ -9,7 +9,7 @@ import { MenuService } from '../../../services/menu.service';
   styleUrls: ['./sidebar-menu.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SidebarMenuComponent implements OnInit {
+export class SidebarMenuComponent {
   public pagesMenu$: Observable<MenuItem[]> = new Observable<MenuItem[]>();
   public showSideBar$: Observable<boolean> = new Observable<boolean>();
 
@@ -21,6 +21,4 @@ export class SidebarMenuComponent implements OnInit {
   public toggleMenu(subMenu: SubMenuItem) {
     this.menuService.toggleMenu(subMenu);
   }
-
-  ngOnInit(): void {}
 }

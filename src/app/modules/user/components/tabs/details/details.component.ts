@@ -1,3 +1,5 @@
+/* eslint-disable @angular-eslint/no-input-rename */
+/* eslint-disable @angular-eslint/component-selector */
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -10,7 +12,7 @@ export class DetailsComponent {
   @Input('tabIcon') icon!: string;
   @Input() active = false;
 
-  isEditOpen: boolean = true;
+  isEditOpen = true;
 
   toggleForm() {
     this.isEditOpen = !this.isEditOpen;

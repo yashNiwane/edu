@@ -1,3 +1,4 @@
+<!-- eslint-disable @angular-eslint/template/no-negated-async -->
 <nav [ngClass]="(showSideBar$ | async) ? 'w-60 xl:w-70' : 'w-[70px]'"
   class="gridh-screen overflow-hidden hidden h-full flex-col justify-between bg-white transition-all duration-300 scrollbar-thin dark:bg-night-700 dark:scrollbar-thumb-night-500 dark:scrollbar-track-night-600 lg:flex">
   <!-- <div> -->
@@ -7,7 +8,7 @@
       <div class="relative h-10">
         <div class="flex items-center" *ngIf="showSideBar$ | async">
           <a routerLink="/dashboard/home" class="flex items-center justify-center bg-primary-500 p-2 focus:outline-none focus:ring-1">
-            <img style=" max-width: 93%; " src="assets/icons/logo.svg" />
+            <img style=" max-width: 93%; " src="assets/icons/logo.svg" alt="logo"/>
           </a>
         </div>
       </div>
@@ -27,7 +28,7 @@
           </div>
         </div>
         
-        <div class="flex items-end justify-between text-xs font-light text-gray-400 dark:text-night-300 "> <span class="hover:text-primary-400 cursor-pointer">Dismiss</span><span routerLink="/user/purchase" class="flex items-end font-semibold hover:text-primary-400 cursor-pointer "><img src="assets/icons/outline/crown.svg" class="mr-1"/>Purchase Token</span></div>
+        <div class="flex items-end justify-between text-xs font-light text-gray-400 dark:text-night-300 "> <span class="hover:text-primary-400 cursor-pointer">Dismiss</span><span routerLink="/user/purchase" class="flex items-end font-semibold hover:text-primary-400 cursor-pointer "><img src="assets/icons/outline/crown.svg" class="mr-1" alt="crown"/>Purchase Token</span></div>
       </div>
     </div>
     <div>
