@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component, Input } from '@angular/core';
 import { MenuService } from 'src/app/modules/layout/services/menu.service';
 import { SubMenuItem } from 'src/app/core/models/menu.model';
 
@@ -7,12 +8,10 @@ import { SubMenuItem } from 'src/app/core/models/menu.model';
   templateUrl: './navbar-mobile-submenu.component.html',
   styleUrls: ['./navbar-mobile-submenu.component.scss'],
 })
-export class NavbarMobileSubmenuComponent implements OnInit {
+export class NavbarMobileSubmenuComponent{
   @Input() public submenu = <SubMenuItem>{};
 
   constructor(private menuService: MenuService) {}
-
-  ngOnInit(): void {}
 
   public toggleMenu(menu: any) {
     this.menuService.toggleSubMenu(menu);

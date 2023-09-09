@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Injectable, OnDestroy } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { BehaviorSubject, Subscription } from 'rxjs';
@@ -17,7 +18,7 @@ export class MenuService implements OnDestroy {
     /** Set dynamic menu */
     this._pagesMenu$.next(Menu.pages);
 
-    let sub = this.router.events.subscribe((event) => {
+    const sub = this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         /** Expand menu base on active route */
         this._pagesMenu$.forEach((menuItem) => {

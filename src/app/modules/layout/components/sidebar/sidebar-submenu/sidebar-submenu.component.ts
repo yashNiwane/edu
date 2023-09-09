@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { Component, Input } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { SubMenuItem } from 'src/app/core/models/menu.model';
 import { MenuService } from '../../../services/menu.service';
@@ -8,15 +9,13 @@ import { MenuService } from '../../../services/menu.service';
   templateUrl: './sidebar-submenu.component.html',
   styleUrls: ['./sidebar-submenu.component.scss'],
 })
-export class SidebarSubmenuComponent implements OnInit {
+export class SidebarSubmenuComponent{
   @Input() public submenu = <SubMenuItem>{};
   public showSideBar$: Observable<boolean> = new Observable<boolean>();
 
   constructor(private menuService: MenuService) {
     this.showSideBar$ = this.menuService.showSideBar$;
   }
-
-  ngOnInit(): void {}
 
   public toggleMenu(menu: any) {
     this.menuService.toggleSubMenu(menu);

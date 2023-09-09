@@ -1,3 +1,6 @@
+/* eslint-disable @angular-eslint/no-input-rename */
+/* eslint-disable @angular-eslint/component-selector */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { Component, Input } from '@angular/core';
 
 @Component({
@@ -11,8 +14,8 @@ export class TransactionsComponent {
   @Input() active = false;
 
   payments: any[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 23, 45, 67, 8, 9, 9, 86, 86, 97, 7, 7, 797, 12, 53, 36, 775, 32]; // Replace with your actual payment data
-  pageSize: number = 5; // Number of items per page
-  currentPage: number = 1;
+  pageSize = 5; // Number of items per page
+  currentPage = 1;
 
   get totalItems(): number {
     return this.payments.length;

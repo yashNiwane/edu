@@ -1,5 +1,6 @@
+/* eslint-disable @angular-eslint/component-selector */
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription, timeout } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { ThemeService } from 'src/app/core/services/theme.service';
 import { ChartOptions } from '../../../../../shared/models/chart-options';
 
@@ -99,7 +100,7 @@ export class NftChartCardComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     /** Chand chart theme */
-    let sub = this.themeService.themeChanged.subscribe((theme) => {
+    const sub = this.themeService.themeChanged.subscribe((theme) => {
       this.chartOptions.tooltip = {
         theme: theme,
       };

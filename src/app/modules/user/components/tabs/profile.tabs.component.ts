@@ -1,4 +1,6 @@
-import { Component, ContentChildren, QueryList } from '@angular/core';
+/* eslint-disable @angular-eslint/no-input-rename */
+/* eslint-disable @angular-eslint/component-selector */
+import { AfterContentInit, Component, ContentChildren, QueryList } from '@angular/core';
 import { DetailsComponent } from './details/details.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 
@@ -7,7 +9,7 @@ import { TransactionsComponent } from './transactions/transactions.component';
   templateUrl: './profile.tabs.component.html',
   styleUrls: ['./profile.tabs.component.scss']
 })
-export class ProfileTabsComponent {
+export class ProfileTabsComponent implements AfterContentInit{
  
 
   @ContentChildren(DetailsComponent) tab1s!: QueryList<DetailsComponent>;

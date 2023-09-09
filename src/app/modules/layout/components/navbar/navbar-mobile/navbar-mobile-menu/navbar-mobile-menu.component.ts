@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MenuService } from 'src/app/modules/layout/services/menu.service';
 import { MenuItem, SubMenuItem } from 'src/app/core/models/menu.model';
@@ -8,7 +8,7 @@ import { MenuItem, SubMenuItem } from 'src/app/core/models/menu.model';
   templateUrl: './navbar-mobile-menu.component.html',
   styleUrls: ['./navbar-mobile-menu.component.scss'],
 })
-export class NavbarMobileMenuComponent implements OnInit {
+export class NavbarMobileMenuComponent{
   public pagesMenu$: Observable<MenuItem[]> = new Observable<MenuItem[]>();
   public showSideBar$: Observable<boolean> = new Observable<boolean>();
 
@@ -24,6 +24,4 @@ export class NavbarMobileMenuComponent implements OnInit {
   public closeMenu() {
     this.menuService.showMobileMenu = false;
   }
-
-  ngOnInit(): void {}
 }

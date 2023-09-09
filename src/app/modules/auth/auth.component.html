@@ -13,8 +13,6 @@
         <div class="carousel-items flex items-center justify-center"
           style="width: fit-content; animation: carouselAnim 20s infinite alternate linear;">
 
-          <!-- <div
-            class="carousel-focus flex items-center flex-col shadow-md mx-5 my-10 px-4 py-3 card rounded-lg shadow-lg relative" > -->
             <div *ngFor="let _ of [].constructor(10); let i = index" class=" carousel-focus bg-white w-80 rounded-lg shadow-md mx-5 my-10 px-4 py-3 flex flex-col card text-grey-darkest relative">
               <div class="p-4 pb-0 flex-1">
                 <div class="flex"> 
@@ -63,11 +61,9 @@
                 </div>
               </div>
               <div class="absolute right-6 top-4">
-                <img src="./assets/images/Icon-left-quote.svg"/>
+                <img src="./assets/images/Icon-left-quote.svg" alt="icon"/>
               </div>
-            </div>            
-          <!-- </div> -->
-
+            </div>                      
         </div>
 
 
@@ -79,7 +75,7 @@
       <!-- logo -->
       <div class="flex items-center justify-center">
         <a class="rounded p-2">
-          <img class="w-48" src="assets/icons/logo.svg" />
+          <img class="w-48" src="assets/icons/logo.svg" alt="logo"/>
         </a>
       </div>
       <!-- Route -->

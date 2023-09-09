@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Nft } from '../../models/nft';
 import { DialogComponent } from '../../components/popup/dialog.component';
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Router } from '@angular/router';
 
 
@@ -12,13 +14,8 @@ export class HomeComponent {
 
   nft: Array<Nft>;
 
-  // private router: Router;
-
   save(data: any, dialog: DialogComponent) {
     this.router.navigate(['/chat/interaction']);
-    // setTimeout(() => {
-    //   dialog.close();
-    // }, 1000);
   }
 
   cancel(dialog: DialogComponent) {
