@@ -9,6 +9,7 @@ export class ProfileComponent {
 
   constructor(private router: Router) {  
   }
+  
   initiateChat() {
     this.router.navigate(['/chat/interaction/conv/asfksdf']);
   }
