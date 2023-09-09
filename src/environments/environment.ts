@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  TAILWIND_MODE: 'build'
+  TAILWIND_MODE: 'build',
 };
 
 /*

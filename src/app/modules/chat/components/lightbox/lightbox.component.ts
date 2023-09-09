@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-lightbox',
   templateUrl: './lightbox.component.html',
-  styleUrls: ['./lightbox.component.scss']
+  styleUrls: ['./lightbox.component.scss'],
 })
 export class LightboxComponent {
   @Input() lightboxImage!: string;

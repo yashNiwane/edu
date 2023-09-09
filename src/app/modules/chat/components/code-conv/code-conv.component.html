@@ -1,17 +1,22 @@
 <div class="p-2">
-    <div class="bg-gray-200 p-4 font-medium text-gray-700 rounded-tl-lg rounded-tr-lg mt-5 ">
-        <h3>Python</h3>
+  <div class="mt-5 rounded-tl-lg rounded-tr-lg bg-gray-200 p-4 font-medium text-gray-700">
+    <h3>Python</h3>
+  </div>
+  <div class="bg-[#272822] px-0">
+    <!-- enabled for the whole page -->
+    <pre
+      class="scrollbar-track-gray-700"
+      style="
+        padding: 0px;
+        margin: 0px;
+      "><code class="language-javascript line-numbers relative px-5" [innerHTML]="code"></code></pre>
+  </div>
+  <div class="relative mb-5 rounded-bl-lg rounded-br-lg bg-gray-200 p-4 font-medium text-gray-500">
+    <p class="text-xs font-light">
+      Use code with caution. <span class="cursor-pointer font-light text-gray-700 underline">Learn More</span>
+    </p>
+    <div class="absolute right-2 bottom-2 cursor-pointer">
+      <img class="mx-auto block h-6 sm:mx-0 sm:shrink-0" src="assets/icons/outline/copy.svg" alt="Copy" />
     </div>
-    <div class="px-0 bg-[#272822]"> <!-- enabled for the whole page -->
-        <pre class="scrollbar-track-gray-700"
-            style="padding: 0px;margin: 0px;"><code class="language-javascript line-numbers relative px-5" [innerHTML]="code"></code></pre>
-    </div>
-    <div class="bg-gray-200 p-4 font-medium text-gray-500 rounded-bl-lg rounded-br-lg mb-5 relative">
-        <p class="text-xs font-light">Use code with caution. <span
-                class="text-gray-700 cursor-pointer font-light underline">Learn More</span></p>
-        <div class="absolute right-2 bottom-2 cursor-pointer">
-            <img class=" mx-auto block h-6  sm:mx-0 sm:shrink-0" src="assets/icons/outline/copy.svg"
-                alt="Copy" />
-        </div>
-    </div>
+  </div>
 </div>

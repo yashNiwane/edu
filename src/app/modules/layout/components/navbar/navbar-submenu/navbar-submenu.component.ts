@@ -7,6 +7,6 @@ import { SubMenuItem } from 'src/app/core/models/menu.model';
   templateUrl: './navbar-submenu.component.html',
   styleUrls: ['./navbar-submenu.component.scss'],
 })
-export class NavbarSubmenuComponent{
+export class NavbarSubmenuComponent {
   @Input() public submenu = <SubMenuItem[]>{};
 }

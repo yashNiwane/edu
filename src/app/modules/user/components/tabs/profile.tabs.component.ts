@@ -7,11 +7,9 @@ import { TransactionsComponent } from './transactions/transactions.component';
 @Component({
   selector: 'profile-tabs',
   templateUrl: './profile.tabs.component.html',
-  styleUrls: ['./profile.tabs.component.scss']
+  styleUrls: ['./profile.tabs.component.scss'],
 })
-export class ProfileTabsComponent implements AfterContentInit{
- 
-
+export class ProfileTabsComponent implements AfterContentInit {
   @ContentChildren(DetailsComponent) tab1s!: QueryList<DetailsComponent>;
   @ContentChildren(TransactionsComponent) tab2s!: QueryList<TransactionsComponent>;
 
@@ -37,24 +35,24 @@ export class ProfileTabsComponent implements AfterContentInit{
     // Activate the tab the user has clicked on
     tab.active = true;
   }
- 
+
   // @ContentChildren(DetailsComponent) tabs!: QueryList<any>;
-  
+
   // // contentChildren are set
   // ngAfterContentInit() {
   //   // get all active tabs
   //   let activeTabs = this.tabs.filter((tab:any)=>tab.active);
-    
+
   //   // if there is no active tab set, activate the first
   //   if(activeTabs.length === 0) {
   //     this.selectTab(this.tabs.first);
   //   }
   // }
-  
+
   // selectTab(tab: any){
   //   // deactivate all tabs
   //   this.tabs.toArray().forEach(tab => tab.active = false);
-    
+
   //   // activate the tab the user has clicked on.
   //   tab.active = true;
   // }

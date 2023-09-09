@@ -9,7 +9,7 @@ import { MenuService } from '../../../services/menu.service';
   templateUrl: './sidebar-submenu.component.html',
   styleUrls: ['./sidebar-submenu.component.scss'],
 })
-export class SidebarSubmenuComponent{
+export class SidebarSubmenuComponent {
   @Input() public submenu = <SubMenuItem>{};
   public showSideBar$: Observable<boolean> = new Observable<boolean>();
 

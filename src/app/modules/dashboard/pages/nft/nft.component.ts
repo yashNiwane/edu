@@ -5,7 +5,7 @@ import { Nft } from '../../models/nft';
   selector: 'app-nft',
   templateUrl: './nft.component.html',
 })
-export class NftComponent{
+export class NftComponent {
   nft: Array<Nft>;
 
   constructor() {

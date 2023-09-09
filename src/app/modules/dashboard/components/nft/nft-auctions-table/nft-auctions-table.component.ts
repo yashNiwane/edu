@@ -6,7 +6,7 @@ import { Nft } from '../../../models/nft';
   selector: '[nft-auctions-table]',
   templateUrl: './nft-auctions-table.component.html',
 })
-export class NftAuctionsTableComponent{
+export class NftAuctionsTableComponent {
   public activeAuction: Nft[] = [];
 
   constructor() {

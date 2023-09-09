@@ -4,5 +4,4 @@ import { Component } from '@angular/core';
   selector: 'app-nft-header',
   templateUrl: './nft-header.component.html',
 })
-export class NftHeaderComponent{
-}
+export class NftHeaderComponent {}

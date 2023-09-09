@@ -8,7 +8,7 @@ describe('LightboxComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LightboxComponent]
+      declarations: [LightboxComponent],
     });
     fixture = TestBed.createComponent(LightboxComponent);
     component = fixture.componentInstance;

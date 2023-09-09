@@ -5,9 +5,7 @@ import { Router } from '@angular/router';
   templateUrl: './interaction.component.html',
 })
 export class InteractionComponent {
-
-  constructor(private router: Router) {  
-  }
+  constructor(private router: Router) {}
 
   initiateChat() {
     this.router.navigate(['/chat/interaction/conv/asfksdf']);

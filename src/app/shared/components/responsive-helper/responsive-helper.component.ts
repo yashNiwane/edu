@@ -7,6 +7,6 @@ import { environment } from 'src/environments/environment';
   templateUrl: './responsive-helper.component.html',
   styleUrls: ['./responsive-helper.component.scss'],
 })
-export class ResponsiveHelperComponent{
+export class ResponsiveHelperComponent {
   public env: any = environment;
 }

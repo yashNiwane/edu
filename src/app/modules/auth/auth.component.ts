@@ -7,6 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./auth.component.scss'],
 })
 export class AuthComponent {
-
-  items:any =[1,2,3,4,5,6];
+  items: any = [1, 2, 3, 4, 5, 6];
 }

@@ -8,7 +8,7 @@ describe('CodeConvComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CodeConvComponent]
+      declarations: [CodeConvComponent],
     });
     fixture = TestBed.createComponent(CodeConvComponent);
     component = fixture.componentInstance;

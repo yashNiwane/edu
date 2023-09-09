@@ -6,6 +6,6 @@ import { Nft } from '../../../models/nft';
   selector: '[nft-single-card]',
   templateUrl: './nft-single-card.component.html',
 })
-export class NftSingleCardComponent{
+export class NftSingleCardComponent {
   @Input() nft: Nft = <Nft>{};
 }

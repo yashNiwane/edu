@@ -6,13 +6,12 @@ declare let Prism: any;
 @Component({
   selector: 'app-code-conv',
   templateUrl: './code-conv.component.html',
-  styleUrls: ['./code-conv.component.scss']
+  styleUrls: ['./code-conv.component.scss'],
 })
-export class CodeConvComponent implements OnInit{
+export class CodeConvComponent implements OnInit {
   code = ``;
 
   ngOnInit(): void {
-
     // The code snippet you want to highlight, as a string
     const code = `import { NgModule } from '@angular/core';
     import { RouterModule, Routes } from '@angular/router';
@@ -54,8 +53,6 @@ export class CodeConvComponent implements OnInit{
 
     const formated = Prism.highlight(code, Prism.languages.javascript, 'javascript');
     const html = formated + lineNumbersWrapper;
-
-
 
     // Returns a highlighted HTML string
     // const html = Prism.highlight(code, Prism.languages.javascript, 'javascript');

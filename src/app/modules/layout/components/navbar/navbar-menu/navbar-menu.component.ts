@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
 import { MenuItem } from 'src/app/core/models/menu.model';
 import { MenuService } from '../../../services/menu.service';
@@ -9,7 +9,7 @@ import { MenuService } from '../../../services/menu.service';
   templateUrl: './navbar-menu.component.html',
   styleUrls: ['./navbar-menu.component.scss'],
 })
-export class NavbarMenuComponent{
+export class NavbarMenuComponent {
   public pagesMenu$: Observable<MenuItem[]> = new Observable<MenuItem[]>();
 
   private showMenuClass = ['scale-100', 'animate-fade-in-up', 'opacity-100', 'pointer-events-auto'];
