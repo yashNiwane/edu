@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class PurchaseComponent {
 
-  paymentSteps = 1;
+  paymentSteps = 0;
 
   minValue = 0;
   maxValue = 100;
