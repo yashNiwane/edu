@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-interaction',
@@ -9,7 +9,6 @@ export class ProfileComponent {
 
   constructor(private router: Router) {  
   }
-
   initiateChat() {
     this.router.navigate(['/chat/interaction/conv/asfksdf']);
   }
