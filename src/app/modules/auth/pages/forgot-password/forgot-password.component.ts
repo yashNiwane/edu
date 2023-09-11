@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: './forgot-password.component.html',
   styleUrls: ['./forgot-password.component.scss'],
 })
-export class ForgotPasswordComponent {}
+export class ForgotPasswordComponent {
+  email: string = ''; // Declare the email variable with a type
+
+  onSubmit() {
+    // You can handle the form submission logic here, e.g., sending a reset password email.
+    console.log('Email submitted:', this.email);
+  }
+}
