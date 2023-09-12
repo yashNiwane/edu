@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-inferrable-types */
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./forgot-password.component.scss'],
 })
 export class ForgotPasswordComponent {
-  email: string = ''; // Declare the email variable with a type
+  email: string = '';
 
   onSubmit() {
     // You can handle the form submission logic here, e.g., sending a reset password email.

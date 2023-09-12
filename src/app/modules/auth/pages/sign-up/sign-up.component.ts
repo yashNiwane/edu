@@ -38,7 +38,7 @@ export class SignUpComponent implements OnInit {
       return;
     }
 
-    const { name, email, password, confirmation } = this.form.value;
+    const {password, confirmation } = this.form.value;
 
     if (password !== confirmation) {
       // Add custom validation for password and confirmation
