@@ -43,9 +43,9 @@ jobs:
 
               # Now we have got the access of EC2 and we will start the deploy .
               cd /var/www/html/chat.edu.frontend &&
-              git checkout development &&
+              git checkout develop &&
               git fetch --all &&
-              git reset --hard origin/development &&
-              git pull origin development &&
+              git reset --hard origin/develop &&
+              git pull origin develop &&
               sudo npm i &&
               sudo npm run build'
