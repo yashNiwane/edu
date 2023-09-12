@@ -25,20 +25,27 @@ jobs:
     - name: Run Linting
       run: npm run lint
 
-  deploy:
+   Deploy:
+    name: Deploy to EC2
     runs-on: ubuntu-latest
-
+    
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - uses: actions/checkout@v2 
+      - name: Build & Deploy
+        env:
+            PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+            HOSTNAME: ${{secrets.SSH_HOST}}
+            USER_NAME: ${{secrets.USER_NAME}}
+      
+        run: |
+          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
-    - name: Setup SSH
-      run: |
-        mkdir -p ~/.ssh
-        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -H 13.234.180.165 >> ~/.ssh/known_hosts
-
-    - name: Deploy code to EC2
-      run: |
-        ssh ubuntu@13.234.180.165 'cd /var/www/html/chat.edu.frontend && git pull && npm run build'
+              # Now we have got the access of EC2 and we will start the deploy .
+              cd /var/www/html/chat.edu.frontend &&
+              git checkout development &&
+              git fetch --all &&
+              git reset --hard origin/development &&
+              git pull origin development &&
+              sudo npm i &&
+              sudo npm run build'
