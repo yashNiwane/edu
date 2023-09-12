@@ -35,7 +35,7 @@ jobs:
     - name: Setup SSH
       run: |
         mkdir -p ~/.ssh
-        echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCnDMrMilEdOhpKbtzssyd12oyyR1EWEnJQxD7L0xfFNpuFgXDIMYkFAmgoP29/M82jDfIETf6GGVPhJ5sYekSzBSqZ4avpHVM1OO5Vld5NA7H6sVpwsM1smpVxHnwHe/qrsrycfZmtNiAfSIf4dfORNxB2eyNytlIMuMvMWSDGsBFeSGRO5o3fxvWOP99SRBxR6bmlNRDd9x4MGbYS0nZLd9v7CgAUDtxEnGTYGsqTJ064CKXw4rvReDOi/eAj82tXoxgGNi30EQ4Ge8RawVEWym+kS7Zu21Rq6PXkDm9jhN5wltIa+pGT1FtcnbiyMGChoBaKykPfEwHxkT8BIlWSjkiphO/sEvHTbfkX3s/kn7MhjHx4x8c5iYIBBL9Ieaa9+Dc77hr5CtNi04WNJ3jNi92RqPXaL27vHzYpWoocysuzZfvqFaTPSTW/DfzVdm1rSDB2sgiZIHaN8aYpW9HiWFcdTCQRVqG34XVXKhotdrKNeiXIijYHgJ/AKFghTwVXNfgSywqPX1pr6Gp6BoFx++eNIDaQGDWKw9i1aPBXESJi93Tq5CD4edo4gp2/2EUbGEYKptGJjuaXJ5OMWgmDfdEgSAufkDmghZ+M75wMu6bsMWmsSO9HTlENPnIDvfXZBpwUkgdOCEjVBC6ngFHAumW00N8ao+g/IHU1MXduGQ== ubuntu@ip-172-31-14-167" > ~/.ssh/id_rsa
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
         ssh-keyscan -H 13.234.180.165 >> ~/.ssh/known_hosts
 
