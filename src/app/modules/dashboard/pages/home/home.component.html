@@ -2,14 +2,18 @@
   <app-nft-header></app-nft-header>
   <div
     (click)="openPopularChat()"
+<<<<<<< HEAD
     class="rounded-lgdark:bg-night-700 flex grid grid-cols-1 flex-col gap-4 px-4 py-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+=======
+    class="rounded-lgdark:bg-night-700 flex grid grid-cols-1 xl:grid-cols-3 flex-col gap-4 px-4 py-4 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+>>>>>>> 92b53e3c6a126de22184f6b8ecbbaa0b94c0f7dd
     <div
       *ngFor="let _ of [].constructor(6); let i = index"
       class="cursor-pointer rounded hover:-translate-y-1 hover:shadow-2xl">
       <div
         class="row-start-1 row-end-1 flex flex-col justify-between border-[rgba(156,_198,_255,_0.67)] bg-white p-2 text-center shadow-[0px_4px_12px_0px_rgba(0,_0,_0,_0.04)] hover:bg-[#fff6d4]">
         <img src="assets/images/python.svg" class="h-28" alt="" />
-        <h2 class="text-md mt-2 font-semibold text-gray-900 dark:text-night-50">Python</h2>
+        <h2 class="text-md mt-2 font-semibold text-gray-900 dark:text-night-50">Python {{i}} </h2>
         <div class="mt-2 mb-4 text-xs font-light text-gray-400 dark:text-night-300">
           Lorem ipsum dolor sit amet consectetur. Fringilla odio ornare
         </div>
