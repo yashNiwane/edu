@@ -12,6 +12,7 @@ export class SignInComponent implements OnInit {
   form!: FormGroup;
   submitted = false;
   passwordTextType!: boolean;
+  
 
   constructor(private readonly _formBuilder: FormBuilder, private readonly _router: Router) {}
 
@@ -29,7 +30,9 @@ export class SignInComponent implements OnInit {
   togglePasswordTextType() {
     this.passwordTextType = !this.passwordTextType;
   }
-
+  login(){
+    this._router.navigate(['dashboard']);
+  }
   onSubmit() {
     this.submitted = true;
     const { email, password } = this.form.value;

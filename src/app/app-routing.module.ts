@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DashboardComponent } from './modules/dashboard/dashboard.component';
+import { authentactionGuard } from './authentaction.guard';
 
 const routes: Routes = [
   {
@@ -9,7 +11,13 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./modules/auth/auth.module').then((m) => m.AuthModule),
+    
   },
+  {  path: 'dashbord',
+     component: DashboardComponent,
+     
+
+   },
   { path: '**', redirectTo: 'error/404' },
 ];
 
